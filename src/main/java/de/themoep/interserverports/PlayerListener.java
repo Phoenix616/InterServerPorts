@@ -45,7 +45,7 @@ public class PlayerListener implements Listener {
             return;
         }
         event.setCancelled(true);
-        plugin.getLogger().info("Initiating teleport of " + event.getPlayer() + " from " + mapping.getMappedWorld() + " to " + mapping.getServer() + "/" + mapping.getWorld());
+        plugin.getLogger().info("Initiating teleport of " + event.getPlayer().getName() + " from " + mapping.getMappedWorld() + " to " + mapping.getServer() + "/" + mapping.getWorld());
 
         // Forge and send plugin message to connect player to other server
         ByteArrayDataOutput cOut = ByteStreams.newDataOutput();
