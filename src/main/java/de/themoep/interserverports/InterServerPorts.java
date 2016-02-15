@@ -14,7 +14,7 @@ import java.util.Map;
 
 /**
  * InterServerPorts
- * Copyright (C) 2015 Max Lee (https://github.com/Phoenix616/)
+ * Copyright (C) 2016 Max Lee (https://github.com/Phoenix616/)
  * <p/>
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
