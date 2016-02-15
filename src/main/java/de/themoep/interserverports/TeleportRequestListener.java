@@ -36,12 +36,15 @@ public class TeleportRequestListener implements PluginMessageListener {
     }
 
     public void onPluginMessageReceived(String channel, Player player, byte[] message) {
-        plugin.getLogger().info("Channel: " + channel);
         if (!channel.equals("BungeeCord")) {
             return;
         }
         ByteArrayDataInput in = ByteStreams.newDataInput(message);
         String subChannel = in.readUTF();
+        plugin.getLogger().info("subChannel: " + subChannel);
+        if(!subChannel.equals(plugin.getName())) {
+            return;
+        }
         short len = in.readShort();
         byte[] msgbytes = new byte[len];
         in.readFully(msgbytes);

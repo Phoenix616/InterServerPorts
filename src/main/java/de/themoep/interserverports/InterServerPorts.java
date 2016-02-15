@@ -39,7 +39,7 @@ public class InterServerPorts extends JavaPlugin {
         loadConfig();
         getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
         getServer().getMessenger().registerOutgoingPluginChannel(this, "BungeeCord");
-        getServer().getMessenger().registerIncomingPluginChannel(this, getName(), new TeleportRequestListener(this));
+        getServer().getMessenger().registerIncomingPluginChannel(this, "BungeeCord", new TeleportRequestListener(this));
     }
 
     private boolean loadConfig() {
