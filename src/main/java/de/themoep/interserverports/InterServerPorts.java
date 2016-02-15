@@ -1,6 +1,9 @@
 package de.themoep.interserverports;
 
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.entity.Player;
 import org.bukkit.event.player.PlayerTeleportEvent;
@@ -59,6 +62,23 @@ public class InterServerPorts extends JavaPlugin {
             worldServerMap.put(world.toLowerCase(), new WorldMapping(world, serverName, worldName));
         }
         return worldServerMap.size() > 0;
+    }
+
+    @Override
+    public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
+        if(cmd.getName().equalsIgnoreCase("InterServerPorts")) {
+            if(args.length > 0) {
+                if("reload".equalsIgnoreCase(args[0])) {
+                    if(loadConfig()) {
+                        sender.sendMessage(ChatColor.GREEN + getName() + " config reloaded!");
+                    } else {
+                        sender.sendMessage(ChatColor.RED + "Failed to reload " + getName() + " config! (Look at the console for exact error)");
+                    }
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     public WorldMapping getWorldServer(String world) {

@@ -4,13 +4,13 @@ version: '${minecraft.plugin.version}'
 description: ${project.description}
 authors: [Phoenix616]
 commands:
-   BukkitTemplatePlugin:
-      aliases: [btp]
+   InterServerPorts:
+      aliases: [isp]
       description: Command description.
-      usage: /<command>
+      usage: /<command> reload
       permission: InterServerPorts.command
       permission-message: You don't have the permission <permission>
 permissions:
-   BukkitTemplatePlugin.command:
+   InterServerPorts.command:
       description: Gives permission to the plugin command
       default: op
