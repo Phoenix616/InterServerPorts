@@ -1,0 +1,4 @@
+worlds:
+  server_lobby:
+    server: lobby
+    world: world
