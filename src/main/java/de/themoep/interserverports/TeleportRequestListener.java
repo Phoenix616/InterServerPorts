@@ -41,7 +41,6 @@ public class TeleportRequestListener implements PluginMessageListener {
         }
         ByteArrayDataInput in = ByteStreams.newDataInput(message);
         String subChannel = in.readUTF();
-        plugin.getLogger().info("subChannel: " + subChannel);
         if(!subChannel.equals(plugin.getName())) {
             return;
         }
