@@ -7,7 +7,7 @@
     <groupId>de.themoep</groupId>
     <artifactId>interserverports</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <description>BukkitTemplatePlugin description!</description>
+    <description>Proof of concept for bringing inter server bungee teleporting to plugins which not natively support it</description>
     <name>InterServerPorts</name>
 
     <properties>
