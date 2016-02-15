@@ -1,5 +1,5 @@
 # InterServerPorts
-This is a proof of concept for enabling plugins that don't natively support inter server teleports via the BungeeCord proxy software.
+This is a proof of concept for enabling plugins that don't natively support cross server teleports via the BungeeCord proxy.
 
 It uses a map of world aliases to teleport players between servers.
 
@@ -15,7 +15,7 @@ So if you would want it to work proberly you would have to make sure that Bukkit
 
 For the caching issue one would have to link the data of the different servers together and maybe reload the config on every server everytime one server changes something. This concept might therefor only be suited for simple warps that are configured one time only.
 
-If you don't want to setup some form of syncing and wont change the locations often (for example for warps or spawns) it might also be practical if the plugin you want to use this with allows to directly set the location rather then having to run a command at the exact position where you want your destination to be, that way you don't have to figure out the exact position be constantly switching between two servers. It may even be that directly manipulating a config file works better if the plugin has an easy editable one and a reload function. (I'm thinking of Essentials' warps here)
+If you don't want to setup some form of syncing and wont change the locations often (for example for warps or spawns) it might also be practical if the plugins you want to use this with allow to directly set the location rather than having to execute a command at the destination's position, that way you don't have to figure out the exact location by constantly switching between two servers. Maybe directly editing the location data works even better if the plugins have an easy editable config and a reload function build in. (I'm thinking of Essentials' warps here)
 
 ### License
 ```
